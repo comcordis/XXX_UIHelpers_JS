@@ -139,7 +139,6 @@ XXX_TextInputExample.prototype.tryEnablingExample = function ()
 
 XXX_TextInputExample.prototype.changeHandler = function ()
 {
-	this.tryEnablingExample();
 	this.updateClearVisibility();
 	
 	this.eventDispatcher.dispatchEventToListeners('change', this);
