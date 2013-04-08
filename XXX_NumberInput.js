@@ -27,7 +27,7 @@ var XXX_NumberInput = function (input, preset, presetSettings)
 		maximumCharacterLength += 1;
 		maximumCharacterLength += this.decimals;
 	}
-	maximumCharacterLength *= 1.05;
+	maximumCharacterLength *= 0.7;
 	maximumCharacterLength = XXX_Number.ceil(maximumCharacterLength);
 		
 	XXX_CSS.setStyle(this.elements.input, 'text-align', 'right');
@@ -190,7 +190,7 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	var addLink = XXX_DOM.createElementNode('a');
 	addLink.href = '#';
 	XXX_CSS.setClass(addLink, 'XXX_NumberInput_Clicker');
-	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/plus.png" class="YAT_icon">');
+	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/plus.png" class="YAT_icon_option">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, addLink);
 	
@@ -200,7 +200,7 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	var substractLink = XXX_DOM.createElementNode('a');
 	substractLink.href = '#';
 	XXX_CSS.setClass(substractLink, 'XXX_NumberInput_Clicker');
-	XXX_DOM.setInner(substractLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/minus.png" class="YAT_icon">');
+	XXX_DOM.setInner(substractLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/minus.png" class="YAT_icon_option">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, substractLink);
 	

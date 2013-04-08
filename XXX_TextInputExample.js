@@ -10,7 +10,7 @@ var XXX_TextInputExample = function (input, example)
 	var clearLink = XXX_DOM.createElementNode('a');
 	clearLink.href = '#';
 	XXX_CSS.setClass(clearLink, 'XXX_TextInputExample_clear');
-	XXX_DOM.setInner(clearLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/cross.png" class="YAT_icon">');
+	XXX_DOM.setInner(clearLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/cross.png" class="YAT_icon_option">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, clearLink);
 	
