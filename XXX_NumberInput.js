@@ -117,6 +117,19 @@ XXX_NumberInput.prototype.usePreset = function (preset, settings)
 			
 			this.correctValue();
 			break;
+		case 'roundedPercentage':
+			this.addSuffix('%');
+			this.addPlusMinus();
+			
+			this.type = 'integer';
+			
+			this.minimum = 0;
+			this.maximum = 100;
+			this.step = 1;
+			this.decimals = 0;
+			
+			this.correctValue();
+			break;
 		case 'percentageMore':
 			this.addSuffix('%');
 			this.addPlusMinus();
