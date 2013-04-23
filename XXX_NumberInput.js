@@ -200,9 +200,13 @@ XXX_NumberInput.prototype.usePreset = function (preset, settings)
 
 XXX_NumberInput.prototype.addPlusMinus = function ()
 {
+	var space = XXX_DOM.createElementNode('span');
+	XXX_DOM.setInner(space, '&nbsp;');
+	
+	XXX_DOM.appendChildNode(this.elements.parent, space);
+	
 	var addLink = XXX_DOM.createElementNode('a');
 	addLink.href = '#';
-	XXX_CSS.setClass(addLink, 'XXX_NumberInput_Clicker');
 	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/blue/plus.png" class="YAT_icon_option">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, addLink);
@@ -212,7 +216,6 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	
 	var substractLink = XXX_DOM.createElementNode('a');
 	substractLink.href = '#';
-	XXX_CSS.setClass(substractLink, 'XXX_NumberInput_Clicker');
 	XXX_DOM.setInner(substractLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/blue/minus.png" class="YAT_icon_option">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, substractLink);
