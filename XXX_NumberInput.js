@@ -27,7 +27,7 @@ var XXX_NumberInput = function (input, preset, presetSettings)
 		maximumCharacterLength += 1;
 		maximumCharacterLength += this.decimals;
 	}
-	maximumCharacterLength *= 0.7;
+	maximumCharacterLength *= 1;
 	maximumCharacterLength = XXX_Number.ceil(maximumCharacterLength);
 		
 	XXX_CSS.setStyle(this.elements.input, 'text-align', 'right');
