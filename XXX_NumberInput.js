@@ -342,8 +342,8 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	
 	XXX_DOM_NativeEventDispatcher.addEventListener(XXX_DOM.getBody(), 'mouseUp', function (nativeEvent)
 	{
-		nativeEvent.preventDefault();
-		nativeEvent.stopPropagation();
+		//nativeEvent.preventDefault();
+		//nativeEvent.stopPropagation();
 		
 		XXX_NumberInput_instance.stopIncrementing();
 		XXX_NumberInput_instance.stopDecrementing();
@@ -353,8 +353,8 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	{
 		XXX_DOM_NativeEventDispatcher.addEventListener(XXX_DOM.getBody(), 'touchEnd', function (nativeEvent)
 		{
-			nativeEvent.preventDefault();
-			nativeEvent.stopPropagation();
+			//nativeEvent.preventDefault();
+			//nativeEvent.stopPropagation();
 			
 			XXX_NumberInput_instance.stopIncrementing();
 			XXX_NumberInput_instance.stopDecrementing();
