@@ -472,16 +472,23 @@ XXX_NumberInput.prototype.setValue = function (value)
 	XXX_DOM_NativeHelpers.nativeCharacterLineInput.setValue(this.elements.input, value);	
 };
 
-XXX_NumberInput.prototype.formatValue = function (value)
+XXX_NumberInput.prototype.formatValue = function (value, avoidStep)
 {
-	return XXX_I18n_Formatter.formatNumber2(value, this.minimum, this.maximum, this.step, this.decimals);
+	var step = this.step;
+	
+	if (avoidStep)
+	{
+		step = false;
+	}
+	
+	return XXX_I18n_Formatter.formatNumber2(value, this.minimum, this.maximum, step, this.decimals);
 };
 
 XXX_NumberInput.prototype.blurHandler = function ()
 {
 	var value = this.getValue();
 	
-	value = this.formatValue(value);
+	value = this.formatValue(value, true);
 	
 	XXX_DOM_NativeHelpers.nativeCharacterLineInput.setValue(this.elements.input, value);	
 	
@@ -494,7 +501,7 @@ XXX_NumberInput.prototype.correctValue = function ()
 	
 	if (value !== false)
 	{
-		value = this.formatValue(value);
+		value = this.formatValue(value, true);
 		
 		XXX_DOM_NativeHelpers.nativeCharacterLineInput.setValue(this.elements.input, value);
 	}
