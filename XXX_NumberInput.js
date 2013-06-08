@@ -205,14 +205,6 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	
 	XXX_DOM.appendChildNode(this.elements.parent, space);
 	
-	var addLink = XXX_DOM.createElementNode('a');
-	addLink.href = '#';
-	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/blue/plus.png" class="YAT_icon_option">');
-	
-	XXX_DOM.appendChildNode(this.elements.parent, addLink);
-	
-	
-	this.elements.addLink = addLink;
 	
 	var substractLink = XXX_DOM.createElementNode('a');
 	substractLink.href = '#';
@@ -221,6 +213,15 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	XXX_DOM.appendChildNode(this.elements.parent, substractLink);
 	
 	this.elements.substractLink = substractLink;
+	
+	var addLink = XXX_DOM.createElementNode('a');
+	addLink.href = '#';
+	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/blue/plus.png" class="YAT_icon_option">');
+	
+	XXX_DOM.appendChildNode(this.elements.parent, addLink);
+	
+	
+	this.elements.addLink = addLink;
 	
 	//XXX_DOM.moveBeforeNode(substractLink, this.elements.input);
 	
