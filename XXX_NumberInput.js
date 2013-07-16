@@ -174,7 +174,7 @@ XXX_NumberInput.prototype.usePreset = function (preset, settings)
 			var currencyExchangeRate = XXX_I18n_Currency.getExchangeRate(this.currency_code);
 			
 			this.minimum = 0;
-			this.maximum = XXX_Default.toPositiveInteger(10000 * currencyExchangeRate, 1);
+			this.maximum = XXX_Default.toPositiveInteger(XXX_Number.round(10000 * currencyExchangeRate), 1);
 			
 			this.type = 'float';
 			
