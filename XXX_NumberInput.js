@@ -208,7 +208,7 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	
 	var substractLink = XXX_DOM.createElementNode('a');
 	substractLink.href = '#';
-	XXX_DOM.setInner(substractLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/minus.png" class="YAT_icon">');
+	XXX_DOM.setInner(substractLink, '<img src="' XXX_URI.wwwProtocolPrefix + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/minus.png" class="YAT_icon">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, substractLink);
 	
@@ -216,7 +216,7 @@ XXX_NumberInput.prototype.addPlusMinus = function ()
 	
 	var addLink = XXX_DOM.createElementNode('a');
 	addLink.href = '#';
-	XXX_DOM.setInner(addLink, '<img src="http://' + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/plus.png" class="YAT_icon">');
+	XXX_DOM.setInner(addLink, '<img src="' XXX_URI.wwwProtocolPrefix + XXX_URI.staticURIPathPrefix + 'YAT/presenters/images/icons/black/plus.png" class="YAT_icon">');
 	
 	XXX_DOM.appendChildNode(this.elements.parent, addLink);
 	
