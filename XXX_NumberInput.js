@@ -51,8 +51,8 @@ var XXX_NumberInput = function (input, preset, presetSettings)
 
 XXX_NumberInput.prototype.setLimits = function (minimum, maximum)
 {
-	this.minimum = XXX_Default.toPositiveInteger(minimum, 0);
-	this.maximum = XXX_Default.toPositiveInteger(maximum, 100);
+	this.minimum = XXX_Default.toInteger(minimum, 0);
+	this.maximum = XXX_Default.toInteger(maximum, 100);
 	
 	this.correctValue();
 };
@@ -138,6 +138,19 @@ XXX_NumberInput.prototype.usePreset = function (preset, settings)
 			
 			this.minimum = 0;
 			this.maximum = 500;
+			this.step = 0.01;
+			this.decimals = 2;
+			
+			this.correctValue();
+			break;
+		case 'percentageFree':
+			this.addSuffix('%');
+			this.addPlusMinus();
+			
+			this.type = 'float';
+			
+			this.minimum = -200;
+			this.maximum = 200;
 			this.step = 0.01;
 			this.decimals = 2;
 			
