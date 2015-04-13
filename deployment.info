@@ -1,0 +1,6 @@
+project:XXX_UIHelpers_JS
+deployEnvironment:development
+checkout:master
+commitHash:bc38b10a6e256a63e30d082556cc81280edc6307
+timestamp:2015-04-13T09:46:17Z
+deployer:operations
